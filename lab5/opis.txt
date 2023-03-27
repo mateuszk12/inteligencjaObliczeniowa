@@ -1,0 +1,15 @@
+
+KNN
+#train_size=0.7,random_state=123
+# n_neighbours=3
+#0.9555555555%
+#n_neighbours=5
+#0.9777777777%
+#n_neighbours=11
+#0.97777777777%
+NB
+#0.9555555556%
+DTC
+#97.77777777777777%
+MINE
+#97.77777777777777%
