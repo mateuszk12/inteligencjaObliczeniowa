@@ -1,20 +1,20 @@
 import matplotlib.pyplot as plt
 import random
 
-from aco import AntColony
+from aco import ACO
 
 
-plt.style.use("dark_background")
+# plt.style.use("dark_background")
 
 
 COORDS = (
     (20, 52),
-    (43, 50),
+    (52, 50),
     (20, 84),
     (70, 65),
-    (29, 90),
-    (87, 83),
-    (73, 23),
+    (29, 70),
+    (29, 83),
+    (83, 65),
 )
 
 
@@ -42,7 +42,7 @@ plot_nodes()
 
 colony = AntColony(COORDS, ant_count=300, alpha=0.5, beta=1.2, 
                     pheromone_evaporation_rate=0.40, pheromone_constant=1000.0,
-                    iterations=300)
+                    iterations=100)
 
 optimal_nodes = colony.get_path()
 
@@ -52,5 +52,5 @@ for i in range(len(optimal_nodes) - 1):
         (optimal_nodes[i][1], optimal_nodes[i + 1][1]),
     )
 
-
+print(optimal_nodes)
 plt.show()
