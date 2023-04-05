@@ -1,10 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import (
-    accuracy_score,
-    confusion_matrix,
-    ConfusionMatrixDisplay,
-)
+from sklearn.metrics import accuracy_score
 import pandas as pd
 
 df = pd.read_csv("iris.csv")
