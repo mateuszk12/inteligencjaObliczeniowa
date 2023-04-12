@@ -1,3 +1,6 @@
+import tensorflow as tf
+
+
 from keras.models import Sequential
 from keras.layers import Dense
 import pandas as pd
@@ -21,18 +24,18 @@ model = Sequential()
 
 model = Sequential()
 model.add(Dense(8, activation='relu'))
-model.add(Dense(20, activation='relu'))
-model.add(Dense(10, activation='relu'))
-model.add(Dense(1, activation='relu'))
+model.add(Dense(6, activation='relu'))
+model.add(Dense(4, activation='relu'))
+model.add(Dense(1, activation='softmax'))
 model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 history = model.fit(train_inputs,
           train_classes,
           validation_data=(test_inputs, test_classes),
-          epochs=50,
+          epochs=500,
           batch_size=10)
-ann_viz(model, title="My first neural network")
+ann_viz(model, title="diabetes neural network")
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('loss curve')
