@@ -1,7 +1,6 @@
 # Import modules
 import numpy as np
 from matplotlib import pyplot as plt
-# Import PySwarms
 import pyswarms as ps
 from pyswarms.utils.functions import single_obj as fx
 from pyswarms.utils.plotters import plot_cost_history
